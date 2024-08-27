@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Backend\PaymentController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductVariantController;
 use App\Http\Controllers\ProductVariantItemController;
@@ -98,6 +99,11 @@ Route::post('/cancel', [SslCommerzPaymentController::class, 'cancel']);
 
 Route::post('/ipn', [SslCommerzPaymentController::class, 'ipn']);
 //SSLCOMMERZ END
+
+
+//ex
+Route::post('suc', [SslCommerzPaymentController::class, 'suc'])->name('suc');
+//ex
 
 
 Route::get('orders', [OrderController::class, 'index'])->name('orders');

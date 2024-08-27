@@ -27,13 +27,13 @@ class CartController extends Controller
     $product = Product::findOrFail($request->product_id);
 
 
-    if (Cart::count() > 1) {
-      foreach (Cart::content()->where('id', $request->product_id) as $cartItem) {
-        if ($product->quantity <= $cartItem->qty) {
-          return response(['status' => 'error', 'message' => 'Quantity not available!']);
-        }
-      }
-    }
+ //   if (Cart::count() > 1) {
+   //   foreach (Cart::content()->where('id', $request->product_id) as $cartItem) {
+  //      if ($product->quantity <= $cartItem->qty) {
+  //     return response(['status' => 'error', 'message' => 'Quantity not available!']);
+  //      }
+  ///    }
+ //   }
 
 
 

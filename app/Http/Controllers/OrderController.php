@@ -28,4 +28,9 @@ class OrderController extends Controller
 
       return view('orders', compact('orders'));
     }
+
+
+    public function suc(){
+      return 'aaaaaaaaa';
+    }
 }

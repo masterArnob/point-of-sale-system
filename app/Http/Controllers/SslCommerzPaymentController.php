@@ -204,6 +204,12 @@ class SslCommerzPaymentController extends Controller
 
     }
 
+
+    public function suc(){
+      return "<a href='".route('orders')."'>orders</a>";
+    }
+
+
     public function success(Request $request)
     {
      
